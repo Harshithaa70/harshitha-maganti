@@ -36,6 +36,7 @@ header {
   height: 40px;
   border-radius: 50%;
   object-fit: cover;
+  margin-left: 0.5rem;
 }
 
 /* Navigation styles */
@@ -95,11 +96,14 @@ header {
   flex-direction: column;
   gap: 1.5rem;
   margin-top: 2rem;
+  padding-left: 1rem;
 }
 
 .mobile-nav-link {
   font-size: 1.25rem;
   color: white;
+  display: block;
+  padding: 0.5rem 0.5rem 0.5rem 1rem;
 }
 
 .close-btn {
