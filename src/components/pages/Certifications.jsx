@@ -7,6 +7,8 @@ import whartonCert from '../../assets/wharton_introduction_to_marketing_cert.jpe
 import udemyCert from '../../assets/udemy_digital_marketing_course_dcert.jpeg';
 import fundacaoCert from '../../assets/fundacao_macro_economics_cert.jpeg';
 import hondaCert from '../../assets/honda_internship_cert.jpeg';
+import drawingExamCert from '../../assets/drawing_exam_certificate.jpg';
+import { image } from 'framer-motion/client';
 
 const Certifications = () => {
   const [selectedCertificate, setSelectedCertificate] = useState(null);
@@ -95,6 +97,15 @@ const Certifications = () => {
       date: "July 2024",
       description: "Successfully completed a two-month Digital Marketing & Sales internship, contributing to lead generation, campaign execution, and sales support operations.",
       image: hondaCert,
+      link: "#"
+    },
+    {
+      id:6,
+      title: "Drawing Exam Certificate", 
+      issuer: "Governament of Andhra Pradesh",
+      date: "March 2019",
+      description: "Completed a drawing exam and received a certificate of merit for outstanding performance in the state-level drawing competition.",
+      image: drawingExamCert,
       link: "#"
     }
   ];

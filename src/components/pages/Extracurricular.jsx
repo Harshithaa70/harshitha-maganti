@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { FaUsers, FaTrophy, FaHandsHelping, FaLightbulb } from 'react-icons/fa';
+import DrawingSlideshow from '../DrawingSlideshow';
 
 const Extracurricular = () => {
   // Animation variants
@@ -133,11 +134,14 @@ const Extracurricular = () => {
             <ul>
               <li>Networking and relationship building</li>
               <li>Time management and prioritization</li>
-              <li>Adaptability and resilience</li>
-              <li>Creative problem-solving</li>
+              <li>Adaptability and resilience</li>              <li>Creative problem-solving</li>
             </ul>
           </div>
         </div>
+      </motion.section>
+
+      <motion.section variants={itemVariants}>
+        <DrawingSlideshow />
       </motion.section>
     </motion.div>
   );

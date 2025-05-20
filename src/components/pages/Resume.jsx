@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { FaGraduationCap, FaBriefcase, FaAward, FaCalendarAlt, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaGraduationCap, FaBriefcase, FaAward, FaCalendarAlt, FaMapMarkerAlt, FaCode, FaFileDownload } from 'react-icons/fa';
 
 const Resume = () => {
   // Animation variants
@@ -138,6 +138,67 @@ const Resume = () => {
                 This role enhanced my skills in communication, marketing analytics, and customer relationship management.
               </p>
             </div> */}
+          </div>
+        </div>
+      </motion.section>
+
+      {/* Projects Section */}
+      <motion.section className="projects-section" variants={itemVariants}>
+        <div className="section-header">
+          <FaCode className="section-icon" />
+          <h2>Projects</h2>
+        </div>
+        
+        <div className="resume-cards">
+          <div className="resume-card">
+            <div className="card-header">
+              <h3>IoT-Based Smart Home System</h3>
+              <div className="card-meta">
+                <span><FaCalendarAlt /> January 2025 - May 2025</span>
+              </div>
+            </div>
+            <div className="card-body">
+              <p>
+                Developed a comprehensive IoT-based smart home system that integrates various sensors 
+                and control mechanisms to enhance home security, energy efficiency, and convenience.
+              </p>
+              <ul className="project-highlights">
+                <li>Implemented a network of temperature, motion, and light sensors using Arduino and Raspberry Pi</li>
+                <li>Designed a mobile application interface for remote monitoring and control</li>
+                <li>Integrated voice command capabilities through digital assistants</li>
+                <li>Achieved 30% reduction in energy consumption through smart automation</li>
+              </ul>              <div className="project-links">
+                <a href="/src/assets/iot_project_pdf.pdf" target="_blank" className="project-link">
+                  <FaFileDownload /> View Project Documentation
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="resume-card">
+            <div className="card-header">
+              <h3>E-commerce Market Analysis Capstone Project</h3>
+              <div className="card-meta">
+                <span><FaCalendarAlt /> September 2024 - December 2024</span>
+              </div>
+            </div>
+            <div className="card-body">
+              <p>
+                Conducted comprehensive market analysis for an e-commerce platform, focusing on 
+                consumer behavior patterns, competitive landscape, and growth opportunities.
+              </p>
+              <ul className="project-highlights">
+                <li>Analyzed 3+ years of sales data using Python and visualization tools</li>
+                <li>Identified key market trends and consumer preferences across different demographics</li>
+                <li>Developed strategic recommendations that led to 15% increase in customer retention</li>
+                <li>Created interactive dashboards to visualize findings and support decision-making</li>
+              </ul>
+              <div className="project-links">
+                <a href="/src/assets/capestone_project_pdf.pdf" target="_blank" className="project-link">
+                  <FaFileDownload /> View Project Report
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </motion.section>
