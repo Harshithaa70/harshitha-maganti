@@ -41,26 +41,23 @@ const Resume = () => {
       variants={containerVariants}
     >
       <motion.section className="resume-header" variants={itemVariants}>
-        <h1>My Resume</h1>
-        <p>An overview of my education, experience, and skills.</p>
-
-        <a
-          href="/harshitha_maganti_resume.pdf"
+        {/* <h1>My Resume</h1>
+        <p>An overview of my education, experience, and skills.</p>        <a
+          href={`${import.meta.env.BASE_URL}harshitha_maganti_resume.pdf`}
           target="_blank"
           rel="noopener noreferrer"
           className="download-btn"
         >
           <FaFileDownload className="icon-left" />
           Download Resume
-        </a>
+        </a> */}
 
         <div className="intro-video-section">
           <h3>Professional Introduction</h3>
           <p>Get to know me better through this personal introduction video</p>
-          <div className="video-container">
-            <video
+          <div className="video-container">            <video
               controls
-              poster="/profile_pic.png"
+              poster={`${import.meta.env.BASE_URL}profile_pic.png`}
               className="intro-video"
               aria-label="Professional introduction video"
               preload="metadata"
@@ -195,7 +192,7 @@ const Resume = () => {
                 <li>Integrated voice command capabilities through digital assistants</li>
                 <li>Achieved 30% reduction in energy consumption through smart automation</li>
               </ul>              <div className="project-links">
-                <a href="/src/assets/iot_project_pdf.pdf" target="_blank" className="project-link">
+                <a href={`${import.meta.env.BASE_URL}assets/iot_project_pdf.pdf`} target="_blank" className="project-link">
                   <FaFileDownload /> View Project Documentation
                 </a>
               </div>
@@ -219,9 +216,8 @@ const Resume = () => {
                 <li>Identified key market trends and consumer preferences across different demographics</li>
                 <li>Developed strategic recommendations that led to 15% increase in customer retention</li>
                 <li>Created interactive dashboards to visualize findings and support decision-making</li>
-              </ul>
-              <div className="project-links">
-                <a href="/src/assets/capestone_project_pdf.pdf" target="_blank" className="project-link">
+              </ul>              <div className="project-links">
+                <a href={`${import.meta.env.BASE_URL}assets/capestone_project_pdf.pdf`} target="_blank" className="project-link">
                   <FaFileDownload /> View Project Report
                 </a>
               </div>

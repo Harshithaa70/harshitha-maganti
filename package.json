@@ -3,10 +3,9 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Harshithaa70.github.io/harshitha-maganti",
-  "scripts": {
+  "homepage": "https://Harshithaa70.github.io/harshitha-maganti",  "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node copy-assets.js",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
