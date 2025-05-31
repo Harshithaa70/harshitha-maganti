@@ -1,39 +1,39 @@
 import { motion } from 'framer-motion';
 import { FaGraduationCap, FaBriefcase, FaAward, FaCalendarAlt, FaMapMarkerAlt, FaCode, FaFileDownload } from 'react-icons/fa';
-
+import intro_video from '../../assets/intro_video.mp4';
 const Resume = () => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { 
+    visible: {
+      opacity: 1,
+      transition: {
         staggerChildren: 0.3,
-        duration: 0.6 
-      } 
+        duration: 0.6
+      }
     },
-    exit: { 
-      opacity: 0, 
-      transition: { 
-        duration: 0.5 
-      } 
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5
+      }
     }
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1, 
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
-      } 
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="resume-container"
       initial="hidden"
       animate="visible"
@@ -43,6 +43,33 @@ const Resume = () => {
       <motion.section className="resume-header" variants={itemVariants}>
         <h1>My Resume</h1>
         <p>An overview of my education, experience, and skills.</p>
+
+        <a
+          href="/harshitha_maganti_resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="download-btn"
+        >
+          <FaFileDownload className="icon-left" />
+          Download Resume
+        </a>
+
+        <div className="intro-video-section">
+          <h3>Professional Introduction</h3>
+          <p>Get to know me better through this personal introduction video</p>
+          <div className="video-container">
+            <video
+              controls
+              poster="/profile_pic.png"
+              className="intro-video"
+              aria-label="Professional introduction video"
+              preload="metadata"
+            >
+              <source src={intro_video} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
       </motion.section>
 
       <motion.section className="education-section" variants={itemVariants}>
@@ -50,7 +77,7 @@ const Resume = () => {
           <FaGraduationCap className="section-icon" />
           <h2>Education</h2>
         </div>
-        
+
         <div className="resume-cards">
           <div className="resume-card">
             <div className="card-header">
@@ -63,7 +90,7 @@ const Resume = () => {
             <div className="card-body">
               <h4>Mahindra University, School of Management</h4>
               <p>
-                Mahindra University served as a foundation for advancing my technical proficiency and inspiring 
+                Mahindra University served as a foundation for advancing my technical proficiency and inspiring
                 a deep commitment to innovation and forward-thinking solutions.
               </p>
               <p><strong>CGPA:</strong> 6.5 (Till 6A)</p>
@@ -93,7 +120,7 @@ const Resume = () => {
             <div className="card-body">
               <h4>The Future Kid's School</h4>
               <p>
-                My foundational education at Future Kids School was instrumental in shaping my 
+                My foundational education at Future Kids School was instrumental in shaping my
                 ambition to build a career in Business.
                 <br></br>
                 <br></br>
@@ -101,9 +128,9 @@ const Resume = () => {
                 <br></br>
                 Achieved 75% in 11th grade and 86.2% in 12 grade
               </p>
-        </div>
-        
-        {/* <div className="timeline-item">
+            </div>
+
+            {/* <div className="timeline-item">
           <div className="timeline-marker"></div>
           <div className="timeline-content">
             <h3>Digital Marketing & Sales Intern</h3>
@@ -148,7 +175,7 @@ const Resume = () => {
           <FaCode className="section-icon" />
           <h2>Projects</h2>
         </div>
-        
+
         <div className="resume-cards">
           <div className="resume-card">
             <div className="card-header">
@@ -159,7 +186,7 @@ const Resume = () => {
             </div>
             <div className="card-body">
               <p>
-                Developed a comprehensive IoT-based smart home system that integrates various sensors 
+                Developed a comprehensive IoT-based smart home system that integrates various sensors
                 and control mechanisms to enhance home security, energy efficiency, and convenience.
               </p>
               <ul className="project-highlights">
@@ -184,7 +211,7 @@ const Resume = () => {
             </div>
             <div className="card-body">
               <p>
-                Conducted comprehensive market analysis for an e-commerce platform, focusing on 
+                Conducted comprehensive market analysis for an e-commerce platform, focusing on
                 consumer behavior patterns, competitive landscape, and growth opportunities.
               </p>
               <ul className="project-highlights">
@@ -208,7 +235,7 @@ const Resume = () => {
           <FaAward className="section-icon" />
           <h2>Skills & Competencies</h2>
         </div>
-        
+
         <div className="skills-container">
           <div className="skill-category">
             <h3>Marketing</h3>
@@ -220,7 +247,7 @@ const Resume = () => {
               <span className="skill-tag">Campaign Analysis</span>
             </div>
           </div>
-          
+
           <div className="skill-category">
             <h3>Analytics</h3>
             <div className="skill-tags">
@@ -231,7 +258,7 @@ const Resume = () => {
               <span className="skill-tag">Marketing Analytics</span>
             </div>
           </div>
-          
+
           <div className="skill-category">
             <h3>Business</h3>
             <div className="skill-tags">
@@ -242,7 +269,7 @@ const Resume = () => {
               <span className="skill-tag">Project Management</span>
             </div>
           </div>
-          
+
           <div className="skill-category">
             <h3>Soft Skills</h3>
             <div className="skill-tags">

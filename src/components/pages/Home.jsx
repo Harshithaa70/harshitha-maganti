@@ -7,35 +7,35 @@ const Home = () => {
   // Animation variants
   const containerVariants = {
     hidden: { opacity: 0 },
-    visible: { 
-      opacity: 1, 
-      transition: { 
+    visible: {
+      opacity: 1,
+      transition: {
         staggerChildren: 0.3,
-        duration: 0.6 
-      } 
+        duration: 0.6
+      }
     },
-    exit: { 
-      opacity: 0, 
-      transition: { 
-        duration: 0.5 
-      } 
+    exit: {
+      opacity: 0,
+      transition: {
+        duration: 0.5
+      }
     }
   };
 
   const itemVariants = {
     hidden: { y: 20, opacity: 0 },
-    visible: { 
-      y: 0, 
-      opacity: 1, 
-      transition: { 
-        duration: 0.8, 
-        ease: "easeOut" 
-      } 
+    visible: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut"
+      }
     }
   };
 
   return (
-    <motion.div 
+    <motion.div
       className="home-container"
       initial="hidden"
       animate="visible"
@@ -56,7 +56,7 @@ const Home = () => {
             </Link>
           </div>
         </motion.div>
-        
+
         <motion.div className="hero-image" variants={itemVariants}>
           <img src={profilePic} alt="Harshitha Maganti" />
         </motion.div>
@@ -79,6 +79,12 @@ const Home = () => {
           <h3>Certifications</h3>
           <p>Professional credentials from Harvard Business, Wharton, and more.</p>
           <Link to="/certifications">View All <FaArrowRight className="icon-right-sm" /></Link>
+        </div>
+
+        <div className="highlight-card">
+          <h3>Recommendations</h3>
+          <p>Professional testimonials from professors and industry mentors.</p>
+          <Link to="/recommendations">Read More <FaArrowRight className="icon-right-sm" /></Link>
         </div>
       </motion.div>
     </motion.div>

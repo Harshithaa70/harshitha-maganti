@@ -81,6 +81,13 @@ const Header = () => {
               </NavLink>
             </li>
             <li>
+              <NavLink to="/recommendations" className={({ isActive }) => (
+                isActive ? "nav-link active" : "nav-link"
+              )}>
+                Recommendations
+              </NavLink>
+            </li>
+            <li>
               <NavLink to="/contact" className={({ isActive }) => (
                 isActive ? "nav-link active" : "nav-link"
               )}>
@@ -91,7 +98,7 @@ const Header = () => {
         </nav>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="mobile-menu-btn"
           onClick={toggleMobileMenu}
           aria-label="Menu"
@@ -100,11 +107,11 @@ const Header = () => {
         </button>
 
         {/* Mobile Navigation */}
-        <div 
-          className="mobile-nav" 
+        <div
+          className="mobile-nav"
           style={{ display: mobileMenuOpen ? 'flex' : 'none', flexDirection: 'column' }}
         >
-          <button 
+          <button
             className="close-btn"
             onClick={toggleMobileMenu}
             aria-label="Close menu"
@@ -136,6 +143,11 @@ const Header = () => {
             <li>
               <NavLink to="/extracurricular" className="mobile-nav-link">
                 Extracurricular
+              </NavLink>
+            </li>
+            <li>
+              <NavLink to="/recommendations" className="mobile-nav-link">
+                Recommendations
               </NavLink>
             </li>
             <li>
